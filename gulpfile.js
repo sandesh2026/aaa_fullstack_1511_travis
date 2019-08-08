@@ -20,6 +20,10 @@ var notify = require('gulp-notify');
 // Development tasks
 // --------------------------------------------------------------
 
+gulp.task('travis', ['build','testServerJS'], function() {
+  process.exit(0);
+});
+
 // Live reload business.
 gulp.task('reload', function () {
     livereload.reload();
